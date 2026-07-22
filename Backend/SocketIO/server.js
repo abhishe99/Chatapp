@@ -9,6 +9,7 @@ const io = new Server(server, {
   cors: {
     origin: "https://chatapp-2-ytkr.onrender.com",
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
