@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../api"; // adjust the path if needed
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthProvider";
@@ -20,7 +20,7 @@ function Login() {
       password: data.password,
     };
 
-    axios
+    api
       .post("/api/user/login", userInfo)
       .then((response) => {
         if (response.data) {
